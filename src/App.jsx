@@ -1,21 +1,24 @@
 import React from 'react';
 import { Routes, Route } from 'react-router-dom';
-import Home from './pages/Home.jsx'; // Importa el componente que acabas de crear
-import Navbar from './components/organisms/Navbar'
+import Home from "./pages/Home.jsx"; // Importa el componente que acabas de crear
+import Navbar from "./components/organisms/Navbar";
+import Footer from './components/molecules/Footer';
 
 function App() {
   return (
     <div className="container-page">
       <Navbar />
-      {/* Aquí es donde podrías poner un Navbar o un Header 
-        que quieras que se muestre en TODAS las páginas.
-      */}
+      {/*se envuelven las rutas en el main*/}
+      <main className="contenido-main">
+        <Routes>
+          <Route path="/" element={<Home />} />
 
-      <Routes>
-        {/* Esta línea le dice a React Router: */}
-        {/* "Cuando la URL sea '/', muestra el componente Home" */}
-        <Route path="/" element={<Home />} />
+
+
+        {/*ruta comodin*/}
       </Routes>
+      </main>
+      <Footer />
     </div>
   );
 }
