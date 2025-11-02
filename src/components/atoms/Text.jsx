@@ -1,8 +1,8 @@
 import React from "react";
 
 function Text({ children, variant = 'p', className }) {
-    const Tag = variant; // Puede ser 'h1', 'p', 'span', etc.
-    return <Tag className={className}>{children}</Tag>;
+    const tag = variant; // Puede ser 'h1', 'p', 'span', etc.
+    return React.createElement(tag, { className }, children);
 }
 
 export default Text;

@@ -1,12 +1,16 @@
 import React from "react";
+import cards from "../data/cards";
+import CardBody from "../components/molecules/CardBody";
+import Text from "../components/atoms/Text";
+
 
 function Home() {
   return (
-    <div>
-      {/* ¡Aquí está tu título! */}
-      <h1>Bienvenido a AmbientDesing</h1>
-      <p>Esta es la página de inicio de tu proyecto.</p>
-    </div>
+      <CardBody>
+        <Text variant="h3" className="title-card">{cards.tituloHome}</Text>
+        <Text variant="p" className="Parrafo-card">{cards.descripcionHome}</Text>
+      </CardBody>
+      
   );
 }
 
