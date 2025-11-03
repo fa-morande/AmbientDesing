@@ -4,7 +4,7 @@ import CardBody from "../components/molecules/CardBody";
 import Text from "../components/atoms/Text";
 import Image from "../components/atoms/Image"
 
-const imageHome = "/img/home.webp"
+const imgHome = "/img/imgHome.webp"
 
 function Home() {
     return (
@@ -30,8 +30,8 @@ function Home() {
                 </div>
                 <div className="image-body">
                     <Image 
-                        className="imagen-home"
-                        src={imageHome}
+                        className="image-home"
+                        src={imgHome}
                         alt="vista animada de inicio"
                     />
                 </div>

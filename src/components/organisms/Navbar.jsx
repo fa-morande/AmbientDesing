@@ -11,7 +11,8 @@ function NavBar() {
             <Nav className="nav-links">
                 <Nav.Link href="/proyectos">Proyectos</Nav.Link>
                 <Nav.Link href="/contacto">Contacto</Nav.Link>
-                <Nav.Link href="/servicios">Servicios</Nav.Link>                    <Nav.Link href="/sobreLaMarca">Sobre la marca</Nav.Link>
+                <Nav.Link href="/servicios">Servicios</Nav.Link>                    
+                <Nav.Link href="/sobreLaMarca">Sobre la marca</Nav.Link>
             </Nav>
         </Container>
         </Navbar>
