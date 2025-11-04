@@ -1,35 +1,51 @@
 const cotizacion = {
     economico: {
-        espacios:"1",
-        asesoria:"se orienta al cliente sobre como rediseniar su espacio",
-        //esto se que me haras modificarlo tarde o temprano titi
-        //aun asi Te Amo
-        visita:"si",
         valor:"$70.000",
-        reunionOnline:"1 reunion online",
-        plano3D: "no",
-        moodBoard:"si",
-        listadoMateriales:"si"
+        esencial:{
+            nombre:"plan economico",
+            descripcion: "breve descripcion del plan como tal",
+            espacios:"1",
+        },
+        agregado:{
+            asesoria:"se orienta al cliente sobre como rediseniar su espacio",        
+            visita:"si",
+            reunionOnline:"1 reunion online",
+            plano3D: "no",
+            moodBoard:"si",
+            listadoMateriales:"si"
+        }
     },
     medio: {
-        espacios:"2 a 3",
-        asesoria:"se orienta al cliente sobre como rediseniar su espacio",
-        visita:"si",
         valor:"$150.000",
-        reunionOnline:"2 reunion online",
-        plano3D: "si",
-        moodBoard:"si",
-        listadoMateriales:"si"
+        esencial:{
+            nombre:"plan completo",
+            descripcion: "breve descripcion del plan como tal",
+            espacios:"2 a 3",
+        },
+        agregado:{
+            asesoria:"se orienta al cliente sobre como rediseniar su espacio",
+            visita:"si",
+            reunionOnline:"2 reunion online",
+            plano3D: "si",
+            moodBoard:"si",
+            listadoMateriales:"si"
+        }
     },
     premium: {
-        espacios:"Hogar completo",
-        asesoria:"se orienta al cliente sobre como rediseniar su espacio",
-        visita:"si",
         valor:"$265.000",
-        reunionOnline:"a medida que se requiera",
-        plano3D: "si",
-        moodBoard:"si",
-        listadoMateriales:"si"
+        esencial:{
+            nombre:"plan premium",
+            descripcion: "breve descripcion del plan como tal",
+            espacios:"Hogar completo",
+        },
+        agregado:{
+            asesoria:"se orienta al cliente sobre como rediseniar su espacio",
+            visita:"si",
+            reunionOnline:"a medida que se requiera",
+            plano3D: "si",
+            moodBoard:"si",
+            listadoMateriales:"si"
+        }
     }
 };
 
