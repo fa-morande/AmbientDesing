@@ -1,5 +1,6 @@
 const cotizacion = {
     economico: {
+        tipo:"Economico",
         valor:"$70.000",
         esencial:{
             nombre:"plan economico",
@@ -16,6 +17,7 @@ const cotizacion = {
         }
     },
     medio: {
+        tipo:"Moderado",
         valor:"$150.000",
         esencial:{
             nombre:"plan completo",
@@ -32,6 +34,7 @@ const cotizacion = {
         }
     },
     premium: {
+        tipo:"Premium",
         valor:"$265.000",
         esencial:{
             nombre:"plan premium",
