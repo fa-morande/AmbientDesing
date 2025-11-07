@@ -1,7 +1,7 @@
 import React from "react";
-import cotizacion from "../../data/cotizacion";
 import Text from "../atoms/Text";
-import { Button } from "bootstrap";
+import Button from "../atoms/Button";
+
 
 function CardCotizacion() {
     return (

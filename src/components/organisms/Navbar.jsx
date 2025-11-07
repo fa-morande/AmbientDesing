@@ -13,6 +13,7 @@ function NavBar() {
                 <Nav.Link href="/contacto">Contacto</Nav.Link>
                 <Nav.Link href="/servicios">Servicios</Nav.Link>                    
                 <Nav.Link href="/sobreLaMarca">Sobre la marca</Nav.Link>
+                <Nav.Link href="/cotizacion">Cotizar</Nav.Link>
             </Nav>
         </Container>
         </Navbar>
