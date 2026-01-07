@@ -1,16 +1,17 @@
 import React from "react";
-import Text from "../atoms/Text";
-import Button from "../atoms/Button";
+import Text from "@/components/atoms/Text";
+import Button from "@/components/atoms/Button";
 
 
 function CardCotizacion() {
+    const cotizacion = "@/services/projects/cotizacion.js"
     return (
         <div className="body-columna">
             <div className="body-esencial-cotizacion">
                 {cotizacion.esencial.map(esencial => (
                     <li key={esencial}>
                         <Text 
-                            classname="item-esencial"
+                            className="item-esencial"
                             >{esencial}
                         </Text>
                     </li>
@@ -21,7 +22,7 @@ function CardCotizacion() {
                 {cotizacion.agregado.map(agregado => (
                     <li key={agregado}>
                         <Text 
-                            classname="item-agregado"
+                            className="item-agregado"
                             >{agregado}
                         </Text>
                     </li>
@@ -39,4 +40,3 @@ function CardCotizacion() {
 }
 
 export default CardCotizacion;
-

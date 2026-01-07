@@ -1,6 +1,6 @@
 import React from 'react';
-import Text from '../atoms/Text';
-import User from '../../data/user';
+import Text from '@/components/atoms/Text';
+import User from '@/services/layouts/user';
 
 function Footer({ className = "" }) {
     return (

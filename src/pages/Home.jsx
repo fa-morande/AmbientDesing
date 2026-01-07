@@ -1,8 +1,8 @@
 import React from "react";
-import cards from "../data/cards";
-import CardBody from "../components/molecules/CardBody";
-import Text from "../components/atoms/Text";
-import Image from "../components/atoms/Image"
+import cards from "@/services/layouts/cards";
+import CardBody from "@/components/molecules/cards/CardBody";
+import Text from "@/components/atoms/Text";
+import Image from "@/components/atoms/Image"
 
 const imgHome = "/img/imgHome.webp"
 

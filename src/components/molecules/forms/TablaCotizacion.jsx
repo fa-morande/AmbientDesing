@@ -1,11 +1,11 @@
 import React from "react";
-import Text from "../atoms/Text";
-import CardCotizacion from "../molecules/CardCotizacion";
-import cotizacion from "../../data/cotizacion";
+import Text from "@/components/atoms/Text";
+import CardCotizacion from "@/components/molecules/cards/CardCotizacion";
+import cotizacion from "@/services/projects/cotizacion";
 
 function TablaCotizacion(){
     return(
-        <div classname="body-tabla-cotizacion">
+        <div className="body-tabla-cotizacion">
             <div className="body-tipo-cotizacion">
                 <Text className="body-titulo-cotizacion" variant="h2">Economico</Text>
                 <CardCotizacion 

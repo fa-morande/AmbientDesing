@@ -1,8 +1,8 @@
 import React from 'react';
 import { Routes, Route } from 'react-router-dom';
 import Home from "./pages/Home.jsx"; // Importa el componente que acabas de crear
-import Navbar from "./components/organisms/Navbar";
-import Footer from './components/molecules/Footer';
+import Navbar from "./components/molecules/navigation/Navbar.jsx";
+import Footer from './components/molecules/navigation/Footer.jsx';
 import Contacto from './pages/Contacto';
 import Cotizacion from './pages/Cotizacion';
 import Proyectos from './pages/Proyectos';
