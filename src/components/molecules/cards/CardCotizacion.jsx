@@ -2,39 +2,34 @@ import React from "react";
 import Text from "@/components/atoms/Text";
 import Button from "@/components/atoms/Button";
 
+function CardCotizacion({ esenciales, agregado, valor, tipo }) {
+    /* Manejo de Error */
+    if (!esenciales || !agregado) return null;
 
-function CardCotizacion() {
-    const cotizacion = "@/services/projects/cotizacion.js"
     return (
         <div className="body-columna">
+            
+            {/* Seccion Esenciales */}
             <div className="body-esencial-cotizacion">
-                {cotizacion.esencial.map(esencial => (
-                    <li key={esencial}>
-                        <Text 
-                            className="item-esencial"
-                            >{esencial}
-                        </Text>
-                    </li>
-                ))}
-                {cotizacion.esencial}
+                <li><Text className="item-esencial">{esenciales.nombre}</Text></li>
+                <li><Text className="item-esencial">{esenciales.descripcion}</Text></li>
+                <li><Text className="item-esencial">Espacios: {esenciales.espacios}</Text></li>
             </div>
+            
+            {/* Seccion Agregado */}
             <div className="body-agregado-cotizacion">
-                {cotizacion.agregado.map(agregado => (
-                    <li key={agregado}>
-                        <Text 
-                            className="item-agregado"
-                            >{agregado}
-                        </Text>
-                    </li>
-                    ))}
-                {cotizacion.agregado}
+                <li><Text className="item-agregado">Asesoría: {agregado.asesoria}</Text></li>
+                <li><Text className="item-agregado">Visita: {agregado.visita}</Text></li>
+                <li><Text className="item-agregado">Plano 3D: {agregado.plano3D}</Text></li>
             </div>
+
+            {/* Seccion Button */}
             <div className="body-valor-cotizacion">
                 <Text variant="h2" className="valor-cotizacion">
-                    {cotizacion.valor}
+                    {valor}
                 </Text>
             </div>
-            <Button>Cotizar {cotizacion.tipo}</Button>
+            <Button>Cotizar {tipo}</Button>
         </div>
     );
 }

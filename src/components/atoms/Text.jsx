@@ -1,8 +1,16 @@
 import React from "react";
 
-function Text({ children, variant = 'p', className }) {
-    const tag = variant; // Puede ser 'h1', 'p', 'span', etc.
-    return React.createElement(tag, { className }, children);
+function Text({ children, variant = "p", className = "", onClick, style }) {
+    const Component = variant; // h1, h2, p, etc.
+    return (
+        <Component 
+            className={className} 
+            onClick={onClick}
+            style={style}
+        >
+            {children}
+        </Component>
+    );
 }
 
 export default Text;

@@ -1,32 +1,29 @@
-import React from 'react';
+import React, { Suspense } from 'react';
 import { Routes, Route } from 'react-router-dom';
-import Home from "./pages/Home.jsx"; // Importa el componente que acabas de crear
-import Navbar from "./components/molecules/navigation/Navbar.jsx";
-import Footer from './components/molecules/navigation/Footer.jsx';
-import Contacto from './pages/Contacto';
-import Cotizacion from './pages/Cotizacion';
-import Proyectos from './pages/Proyectos';
-import Servicios from './pages/Servicios';
-import SobreLaMarca from './pages/SobreLaMarca';
+import { appRoutes } from '@/routes/Config';
+import Navbar from '@/components/molecules/navigation/Navbar';
 
 function App() {
     return (
-        <div className="container-page">
-        <Navbar />
-        {/*se envuelven las rutas en el main*/}
-        <main className="contenido-main">
-            <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/contacto" element={<Contacto />} />
-            <Route path="/cotizacion" element={<Cotizacion />} />
-            <Route path="/proyectos" element={<Proyectos />} />
-            <Route path="/servicios" element={<Servicios />} />
-            <Route path="/sobreLaMarca" element={<SobreLaMarca />} />
-            {/*ruta comodin*/}
+        <Suspense fallback={<div>Cargando...</div>}>
+        <Routes>
+            {appRoutes.map(({ path, component: Component, showNavbar }) => (
+            <Route
+                key={path}
+                path={path}
+                element={
+                <>
+                    {/* Solo renderiza el Navbar si showNavbar no es explícitamente false */}
+                    {showNavbar !== false && <Navbar />}
+                    <main className="page-content">
+                    <Component />
+                    </main>
+                </>
+                }
+            />
+            ))}
         </Routes>
-        </main>
-        <Footer />
-        </div>
+        </Suspense>
     );
 }
 
