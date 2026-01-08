@@ -2,6 +2,7 @@ import React, { Suspense } from 'react';
 import { Routes, Route } from 'react-router-dom';
 import { appRoutes } from '@/routes/Config';
 import Navbar from '@/components/molecules/navigation/Navbar';
+import Footer from '@/components/molecules/navigation/Footer'; // 1. Importar el Footer
 
 function App() {
     return (
@@ -13,11 +14,15 @@ function App() {
                 path={path}
                 element={
                 <>
-                    {/* Solo renderiza el Navbar si showNavbar no es explícitamente false */}
+                    {/* 2. El Navbar se muestra según la config */}
                     {showNavbar !== false && <Navbar />}
+                    
                     <main className="page-content">
                     <Component />
                     </main>
+
+                    {/* 3. Renderizar el Footer aquí para que aparezca en todas las páginas */}
+                    {showNavbar !== false && <Footer />} 
                 </>
                 }
             />

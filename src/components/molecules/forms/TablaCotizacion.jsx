@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import CardCotizacion from "@/components/molecules/cards/CardCotizacion";
-import HeaderDinamic from "@/components/molecules/navigation/HeaderDinamic"; 
 import cotizacion from "@/services/projects/cotizacion";
+import HeaderDinamico from "@/components/molecules/navigation/HeaderDinamico";
 
 function TablaCotizacion() {
     const planesKeys = Object.keys(cotizacion);
@@ -16,7 +16,7 @@ function TablaCotizacion() {
     return (
         <div className="body-tabla-cotizacion">
             {/* Seccion Header */}
-            <HeaderDinamic 
+            <HeaderDinamico 
                 options={opcionesHeader} 
                 activeTab={planActivo} 
                 onTabChange={setPlanActivo} 

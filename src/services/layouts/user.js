@@ -27,12 +27,7 @@ const user = {
             url: "",
             icono: "tiktok"
         }
-    ],
-    nosotros: "",
-    bievenidos: "titulo de la card",
-    titulo: "Servicios",
-    texto: "aqui es donde va lo escrito que te redirecciona luego con un boton a revisar el portafolio"
-
+    ]
 }
 
 export default user;
